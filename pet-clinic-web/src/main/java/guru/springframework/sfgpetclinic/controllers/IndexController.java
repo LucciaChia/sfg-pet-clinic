@@ -10,4 +10,10 @@ public class IndexController {
     public String index() {
         return "index"; // mysli sa tym index.html, ale piseme bez koncovky
     }
+
+    @RequestMapping("/oups")
+    public String oupsHandler() {
+
+        return "notimplemented";
+    }
 }

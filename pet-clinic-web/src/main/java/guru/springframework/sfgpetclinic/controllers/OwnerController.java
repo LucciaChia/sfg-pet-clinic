@@ -23,4 +23,10 @@ public class OwnerController {
         // use this template for this "owner" var
         return "owners/index"; // spojenie s resources v templates/owners/index.html
     }
+
+    @RequestMapping("/find")
+    public String findOwners() {
+
+        return "notimplemented";
+    }
 }
