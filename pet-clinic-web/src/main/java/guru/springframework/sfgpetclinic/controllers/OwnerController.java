@@ -44,7 +44,10 @@ public class OwnerController {
         }
 
         // find owners by last name
-        List<Owner> results = ownerService.findAllByLastNameLike(owner.getLastName());
+        // by appending the wild card "%" and just as a refresher underneath the covers that's going to do a SQL
+        // search and it's going to do a like clause. Then the "%" sign is a wild card character in SQL, so that's
+        // what we;re appending to the String
+        List<Owner> results = ownerService.findAllByLastNameLike("%" + owner.getLastName() + "%");
 
         if (results.isEmpty()) {
             // no owners found
